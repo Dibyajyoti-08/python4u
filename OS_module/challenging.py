@@ -5,7 +5,7 @@ in a directory by appending "_backup" to their names
 
 import os
 
-path = '/home/dibyajyoti/Work/py_module/beginner_module_OS'
+path = '/home/dibyajyoti/Work/py_module/OS_module'
 
 for filename in os.listdir(path):
     if filename.endswith(".txt"):
