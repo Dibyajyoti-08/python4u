@@ -1,19 +1,13 @@
 '''
-Implement a program that measures and prints 
-the memory usage of an object (e.g., a list) using the sys module.
+Write a program to list all files and 
+subdirectories in a given directory, recursively.
 '''
 
-import sys
+import os
 
-listInput = [1, 4, 3, 5, 6]
-total_memory_elements = 0
-memory_usage = sys.getsizeof(listInput)
+path = "/home/dibyajyoti/Work/py_module/"
 
-for item in listInput:
-    total_memory_elements += sys.getsizeof(item)
-
-total_memory = memory_usage + total_memory_elements
-
-print(f"The memory of the list object itself: {memory_usage} bytes")
-print(f"The memory usage of individual element : {total_memory_elements} bytes")
-print(f"Total memory usage (list + elements): {total_memory} bytes")
+for root, dirs, files in os.walk(path):
+    print(f"Directory: {root}")
+    for name in files:
+        print(f"File: {name}")
