@@ -6,7 +6,6 @@ where 6 unique random numbers are selected from a range of 1 to 49.
 from random import randint
 
 def lottery_draw():
-    # Define the range of numbers
     min_num = 1
     max_num = 49
     num_to_select = 6
